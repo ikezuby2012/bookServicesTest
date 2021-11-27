@@ -37,6 +37,8 @@ test("get a book by name", () => {
 })
 
 test("borrow book", () => {
+    bookService.borrowBook("test2");
+    bookService.borrowBook("test5");
     expect(bookService.borrowBook("test5")).toEqual(
         expect.arrayContaining([
             expect.objectContaining({ name: 'test5', author: 'testAuthor5', yearOfPub: 2005 })
